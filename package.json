@@ -9,7 +9,6 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "precommit": "lint-staged",
     "heroku-postbuild": "npm run build"
   },
   "lint-staged": {

@@ -1,0 +1,6 @@
+%nuxt-link{ ':to': 'card.slug' }
+  %article
+    %header
+      %h1 {{ card.title }}
+    .thumbnail{ 'v-if': 'thumbnail' }
+      %img{ ':src': 'thumbnail.url', ':alt': 'card.description', ':height': 'thumbnail.height', ':width': 'thumbnail.width' }

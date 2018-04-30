@@ -1,0 +1,22 @@
+h1 {
+  font-weight: 300;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.6em;
+  padding: 0 10px;
+  margin: 0 20px;
+  border-right: 1px solid white;
+  a:hover {
+    text-decoration: none;
+    text-shadow: 4px 0 gray;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 5vw;
+  margin-top: 20px;
+}

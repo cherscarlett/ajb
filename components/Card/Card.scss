@@ -1,0 +1,26 @@
+
+header {
+  display: none;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+a {
+  display: block;
+  &:hover {
+    img {
+      filter: contrast(100%) brightness(100%) saturate(100%);
+    }
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  filter: contrast(150%) brightness(120%) saturate(30%);
+  transition: all 600ms ease-in-out;
+}
