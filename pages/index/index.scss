@@ -1,0 +1,13 @@
+ul {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  flex-wrap: wrap;
+}
+
+li {
+  margin: 20px;
+  width: 30%;
+  max-width: 60%;
+  flex-grow: 1;
+}
