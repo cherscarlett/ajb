@@ -12,6 +12,7 @@ li.card {
   width: calc(40% - 40px);
   max-width: calc(100% - 40px);
   flex-grow: 1;
+  min-width: 320px;
 }
 
 li.card:first-child {
