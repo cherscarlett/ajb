@@ -17,11 +17,28 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "Hoodrych || ajb",
+    title: "hoodrych || ajb",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Films by ajb" }
+      {
+        hid: "description",
+        name: "description",
+        content: "ajb | visual | digital native"
+      },
+      {
+        name: "keywords",
+        content:
+          "hoodrych, adam brown, ajb, videos, films, short films, photography, videography, nature, action, surfing, photographer, videographer, socal, hiking, art"
+      },
+      { property: "og:title", content: "hoodrych || ajb" },
+      { property: "og:site_name", content: "hoodrych || ajb" },
+      { property: "og:description", content: "ajb | visual | digital native" },
+      { property: "og:image", content: "http://hoodry.ch/social.jpg" },
+      { property: "og:url", content: "http://hoodry.ch" },
+      { name: "twitter:site", content: "@hoodrychx" },
+      { name: "twitter:image:alt", content: "" },
+      { name: "twitter:card", content: "summary_large_image" }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.png" },

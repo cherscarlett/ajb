@@ -1,0 +1,5 @@
+%footer
+  %ul.external
+    %li{ 'v-for': 'link in $store.state.footerLinks', ':key': 'link.id' }
+      %SocialLink{ ':link': 'link' }
+  %small &copy; ajb, all rights reserved.

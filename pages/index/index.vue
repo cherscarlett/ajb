@@ -17,10 +17,14 @@
       return client
         .getEntries({content_type: 'video'})
         .then((response) => {
+          const cards = response.items.map(entry => {
+            return Object.assign({ id: entry.sys.id }, entry.fields)
+          })
+          console.log(cards)
           return {
-            cards: response.items.map(entry => {
-              return Object.assign({ id: entry.sys.id }, entry.fields)
-            })
+            cards: cards.sort((x, y) => {
+                    return new Date(x.datePublished).getTime() - new Date(y.datePublished).getTime()
+                  })
           }
         })
         .catch(console.error)

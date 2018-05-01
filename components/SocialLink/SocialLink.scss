@@ -1,0 +1,14 @@
+a {
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  filter: grayscale(100%) brightness(1.05);
+  transition: all 600ms ease-in-out;
+  text-indent: -10000px;
+  display: inline-block;
+  &:hover {
+    filter: grayscale(0%) brightness(1);
+  }
+}

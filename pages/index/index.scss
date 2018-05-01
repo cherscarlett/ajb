@@ -1,13 +1,19 @@
-ul {
+ul.cards {
   display: flex;
   justify-content: center;
   padding: 50px 0;
   flex-wrap: wrap;
+  max-width: 80%;
+  margin: auto;
 }
 
-li {
+li.card {
   margin: 20px;
-  width: 30%;
-  max-width: 60%;
+  width: calc(40% - 40px);
+  max-width: calc(100% - 40px);
   flex-grow: 1;
+}
+
+li.card:first-child {
+  flex: 1 100%;
 }
