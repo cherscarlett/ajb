@@ -2,6 +2,15 @@ div {
   position: absolute;
   left: 5vw;
   right: 5vw;
-  top: 5vw;
+  top: 50px;
   bottom: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  div {
+    top: 100px;
+  }
 }
