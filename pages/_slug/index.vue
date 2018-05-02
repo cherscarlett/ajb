@@ -42,7 +42,7 @@
           { hid: 'video:swf:type', property: "og:video:type", content: "application/x-shockwave-flash" },
           { hid: 'video:duration', property: "video:duration", content: this.duration },
           { hid: 'video:release_date', property: "video:release_date", content: this.released },
-          { hid: 'video:director', property: 'video:director', content: 'Adam Brown'}
+          { hid: 'video:director', property: 'video:director', content: 'Adam Brown'},
           { hid: 'url', property: "og:url", content: "http://hoodry.ch/" + this.slug },
           { hid: 'type', property: "og:type", content: "video.other"},
           { hid: 'twitter:card', name: "twitter:card", content: "player" },
