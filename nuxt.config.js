@@ -20,7 +20,7 @@ module.exports = {
     title: "hoodrych || ajb",
     meta: [
       { charset: "utf-8" },
-      { property: "author", content: "Adam Brown" },
+      { name: "author", content: "Adam Brown" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
