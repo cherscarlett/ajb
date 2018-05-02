@@ -9,6 +9,18 @@ article {
   position: relative;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  filter: contrast(150%) brightness(120%) saturate(30%);
+  transition: filter 600ms ease-in-out;
+  &[lazy=loading] {
+    filter: contrast(100%) brightness(100%) saturate(100%);
+    width: 50px;
+  }
+}
+
+
 a {
   display: block;
   &:hover {
@@ -18,9 +30,6 @@ a {
   }
 }
 
-img {
-  width: 100%;
-  height: auto;
-  filter: contrast(150%) brightness(120%) saturate(30%);
-  transition: all 600ms ease-in-out;
+.thumbnail {
+  text-align: center;
 }

@@ -3,4 +3,4 @@
     %header
       %h1 {{ card.title }}
     .thumbnail{ 'v-if': 'thumbnail' }
-      %img{ ':src': 'thumbnail.url', ':alt': 'card.description', ':height': 'thumbnail.height', ':width': 'thumbnail.width' }
+      %img{ 'v-lazy': 'thumbnail.url', ':alt': 'card.description', ':height': 'thumbnail.height', ':width': 'thumbnail.width' }

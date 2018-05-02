@@ -17,6 +17,7 @@
     methods: {
       async getThumbnail () {
         let { data } = await axios.get(`https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/${this.card.vimeoId}`)
+        this.$store.commit('toggle', { bool: false })
         this.thumbnail = {
           url: data.thumbnail_url_with_play_button,
           height: data.thumbnail_height,

@@ -20,7 +20,6 @@
           const cards = response.items.map(entry => {
             return Object.assign({ id: entry.sys.id }, entry.fields)
           })
-          console.log(cards)
           return {
             cards: cards.sort((x, y) => {
                     return new Date(x.datePublished).getTime() - new Date(y.datePublished).getTime()

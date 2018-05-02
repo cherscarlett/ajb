@@ -30,13 +30,14 @@ module.exports = {
       {
         name: "keywords",
         content:
-          "hoodrych, adam brown, ajb, videos, films, short films, photography, videography, nature, action, surfing, photographer, videographer, socal, hiking, art"
+          "hoodrych, adam brown, ajb, videos, films, short films, photography, videography, nature, action, surfing, photographer, videographer, socal, hiking, art, music"
       },
       { property: "og:title", content: "hoodrych || ajb" },
       { property: "og:site_name", content: "hoodrych || ajb" },
       { property: "og:description", content: "ajb | visual | digital native" },
       { property: "og:image", content: "http://hoodry.ch/social.jpg" },
       { property: "og:url", content: "http://hoodry.ch" },
+      { property: "og:type", content: "website" },
       { name: "twitter:site", content: "@hoodrychx" },
       { name: "twitter:image:alt", content: "" },
       { name: "twitter:card", content: "summary_large_image" }
@@ -44,8 +45,19 @@ module.exports = {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
       {
-        rel: "stylesheet",
-        href: "/typography.css"
+        rel: "preload",
+        href: "/loader.svg",
+        as: "image"
+      },
+      {
+        rel: "preload",
+        href: "/fonts/ParaType-Futura-PT-Book.woff",
+        as: "font"
+      },
+      {
+        rel: "preload",
+        href: "/typography.css",
+        as: "style"
       }
     ]
   },

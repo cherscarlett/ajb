@@ -4,6 +4,7 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       content: {},
+      loading: true,
       footerLinks: [
         {
           id: "instagram",
@@ -26,6 +27,9 @@ const createStore = () => {
     mutations: {
       put(state, { type, entries }) {
         Object.assign(state.content, { [type]: entries });
+      },
+      toggle(state, { bool }) {
+        state.loading = bool;
       }
     }
   });
