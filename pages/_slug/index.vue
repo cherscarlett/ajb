@@ -17,7 +17,7 @@
           store.commit('toggle', { bool: false })
           const video = response.items.find(entry => entry.fields.slug === params.slug)
           const { data } = await axios.get(`https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/${video.fields.vimeoId}&title=false&portrait=false&byline=false&autoplay=true&height=1280&width=720`)
-          return { iframe: data.html, title: video.fields.title, description: video.fields.description, vimeoId: video.fields.vimeoId, thumbnail: data.thumbnail_url_with_play_button, height: data.height, width: data.width, slug: params.slug }
+          return { iframe: data.html, title: video.fields.title, description: video.fields.description, vimeoId: video.fields.vimeoId, thumbnail: data.thumbnail_url_with_play_button, height: data.height, width: data.width, slug: params.slug, duration: data.duration, released: data.upload_date }
         })
         .catch(console.error)
     },
@@ -27,20 +27,23 @@
         meta: [
           { hid: "description", name: "description", content: this.description },
           { hid: 'title', property: "og:title", content: this.title + ' || hoodrych || ajb' },
-          { property: "og:site_name", content: "hoodrych || ajb" },
           { hid: 'og:description', property: "og:description", content: "ajb | " + this.description },
           { hid: 'image', property: "og:image", content: this.thumbnail },
           { hid: 'image:secure', property: "og:image:secure_url", content: this.thumbnail },
+          { hid: 'video', property: "og:video", content: "https://player.vimeo.com/video/" + this.vimeoId + "?autoplay=1" },
           { hid: 'video:url', property: "og:video:url", content: "https://player.vimeo.com/video/" + this.vimeoId + "?autoplay=1" },
           { hid: 'video:url:secure', property: "og:video:secure_url", content: "https://player.vimeo.com/video/" + this.vimeoId + "?autoplay=1" },
           { hid: 'video:type', property: "og:video:type", content: "text/html" },
           { hid: 'video:width', property: "og:video:width", content: this.width },
           { hid: 'video:height', property: "og:video:height", content: this.height },
+          { hid: 'video:swf', property: "og:video", content: "https://vimeo.com/moogaloop.swf?clip_id=" + this.vimeoId + "?autoplay=1" },
           { hid: 'video:swf:url', property: "og:video:url", content: "https://vimeo.com/moogaloop.swf?clip_id=" + this.vimeoId + "?autoplay=1" },
           { hid: 'video:swf:url:secure', property: "og:video:secure_url", content: "https://vimeo.com/moogaloop.swf?clip_id=" + this.vimeoId + "?autoplay=1" },
           { hid: 'video:swf:type', property: "og:video:type", content: "application/x-shockwave-flash" },
+          { hid: 'video:duration', property: "video:duration", content: this.duration },
+          { hid: 'video:release_date', property: "video:release_date", content: this.released },
           { hid: 'url', property: "og:url", content: "http://hoodry.ch/" + this.slug },
-          { hid: 'type', property: "og:type", content: "article"},
+          { hid: 'type', property: "og:type", content: "video.other"},
           { hid: 'twitter:card', name: "twitter:card", content: "player" },
           { hid: "twitter:player:width", name: "twitter:player:width", content: this.width },
           { hid: "twitter:player:height", name: "twitter:player:height", content: this.height },
