@@ -34,7 +34,11 @@ module.exports = {
       },
       { hid: "title", property: "og:title", content: "hoodrych || ajb" },
       { property: "og:site_name", content: "hoodrych || ajb" },
-      { property: "og:description", content: "ajb | visual | digital native" },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: "ajb | visual | digital native"
+      },
       {
         hid: "image",
         property: "og:image",
@@ -44,7 +48,11 @@ module.exports = {
       { hid: "type", property: "og:type", content: "website" },
       { name: "twitter:site", content: "@hoodrychx" },
       { name: "twitter:image:alt", content: "" },
-      { name: "twitter:card", content: "summary_large_image" }
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image"
+      }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.png" },

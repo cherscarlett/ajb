@@ -28,7 +28,7 @@
           { hid: "description", name: "description", content: this.description },
           { hid: 'title', property: "og:title", content: this.title + ' || hoodrych || ajb' },
           { property: "og:site_name", content: "hoodrych || ajb" },
-          { property: "og:description", content: "ajb | " + this.description },
+          { hid: 'og:description', property: "og:description", content: "ajb | " + this.description },
           { hid: 'image', property: "og:image", content: this.thumbnail },
           { hid: 'image:secure', property: "og:image:secure_url", content: this.thumbnail },
           { hid: 'video:url', property: "og:video:url", content: "https://player.vimeo.com/video/" + this.vimeoId + "?autoplay=1" },
