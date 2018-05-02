@@ -1,12 +1,8 @@
 @charset "UTF-8";
 
-font-face {
+@font-face {
   font-family: "Futura PT";
   src: url(/fonts/ParaType-Futura-PT-Book.woff) format("woff");
   font-weight: normal;
   font-style: normal;
-}
-
-body {
-  font-family: "Futura PT", "futura-pt", "Futura", sans-serif;
 }
