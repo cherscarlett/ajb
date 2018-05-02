@@ -16,7 +16,7 @@
         .then(async (response) => {
           const video = response.items.find(entry => entry.fields.slug === params.slug)
           const { data } = await axios.get(`https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/${video.fields.vimeoId}&title=false&portrait=false&byline=false&autoplay=true&height=auto&width=auto`)
-          return { iframe: data.html, title: video.fields.title, description: video.fields.description, vimeoId: video.fields.vimeoId, thumbnail: data.thumbnail_url_with_play_button, height: data.height, width: data.width }
+          return { iframe: data.html, title: video.fields.title, description: video.fields.description, vimeoId: video.fields.vimeoId, thumbnail: data.thumbnail_url_with_play_button, height: data.height, width: data.width, slug: params.slug }
         })
         .catch(console.error)
     },
@@ -30,7 +30,7 @@
           { property: "og:description", content: "ajb | " + this.description },
           { property: "og:image", content: this.thumbnail },
           { property: "og:video", content: "https://player.vimeo.com/video/" + this.vimeoId + "?autoplay=1" },
-          { property: "og:url", content: "http://hoodry.ch" },
+          { property: "og:url", content: "http://hoodry.ch/" + this.slug },
           { name: "twitter:site", content: "@hoodrychx" },
           { name: "twitter:image:alt", content: "" },
           { name: "twitter:card", content: "player" },
