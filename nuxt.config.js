@@ -58,11 +58,6 @@ module.exports = {
       { rel: "icon", type: "image/x-icon", href: "/favicon.png" },
       {
         rel: "preload",
-        href: "/loader.svg",
-        as: "image"
-      },
-      {
-        rel: "preload",
         href: "/fonts/ParaType-Futura-PT-Book.woff",
         as: "font"
       },
