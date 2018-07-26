@@ -56,7 +56,10 @@
         link: [
           { hid: 'canonical', rel: "canonical",
           href: "http://hoodry.ch/" + this.slug}
-        ]
+        ],
+        bodyAttrs: {
+          class: 'video-player'
+        }
       }
     }
   }

@@ -1,17 +1,35 @@
 @import '../assets/scss/core.scss';
 
 body {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   font-family: "Futura PT", "futura-pt", "Futura", sans-serif;
+  transition: all 600ms ease-in;
+  &.video-player {
+    background: black;
+    color: white;
+  }
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
+  transition: all 600ms ease-in;
   &:hover {
     text-decoration: underline;
   }
+}
+
+body.video-player {
+ a {
+   color: white;
+ }
+ header, footer {
+   opacity: .15;
+ }
+ h1 {
+   border-right: 1px solid white;
+ }
 }
 
 iframe {
