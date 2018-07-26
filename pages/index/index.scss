@@ -1,6 +1,6 @@
 ul.cards {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 50px 0;
   flex-wrap: wrap;
   max-width: 80%;
@@ -9,12 +9,7 @@ ul.cards {
 
 li.card {
   margin: 20px;
-  width: calc(40% - 40px);
+  width: calc(33% - 40px);
   max-width: calc(100% - 40px);
-  flex-grow: 1;
   min-width: 320px;
-}
-
-li.card:first-child {
-  flex: 1 100%;
 }
