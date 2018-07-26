@@ -13,3 +13,9 @@ li.card {
   max-width: calc(100% - 40px);
   min-width: 320px;
 }
+
+@media (max-width: 969px) {
+  li.card {
+    width: calc(100% - 40px);
+  }
+}
