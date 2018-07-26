@@ -9,6 +9,27 @@ div {
   justify-content: center;
 }
 
+.close {
+  background-color: transparent;
+  background-image: url('close.svg');
+  background-size: cover;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  outline: 0;
+  border: none;
+  position: absolute;
+  right: 1.5vw;
+  top: 1.5vw;
+  opacity: .7;
+  transition: opacity 300ms ease-in;
+  z-index: 10;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
 @media (max-width: 480px) {
   div {
     top: 100px;
