@@ -210,6 +210,126 @@ export default {
         }
       };
     }
+    if (this.platform === "youtube") {
+      return {
+        title: this.title + " || hoodrych || ajb",
+        meta: [
+          {
+            hid: "description",
+            name: "description",
+            content: this.description
+          },
+          {
+            hid: "title",
+            property: "og:title",
+            content: this.title + " || hoodrych || ajb"
+          },
+          {
+            hid: "og:description",
+            property: "og:description",
+            content: "ajb | " + this.description
+          },
+          { hid: "image", property: "og:image", content: this.thumbnail },
+          {
+            hid: "image:secure",
+            property: "og:image:secure_url",
+            content: this.thumbnail
+          },
+          {
+            hid: "video",
+            property: "og:video",
+            content: "https://www.youtube.com/embed/" + this.youtubeId
+          },
+          {
+            hid: "video:url",
+            property: "og:video:url",
+            content: "https://www.youtube.com/embed/" + this.youtubeId
+          },
+          {
+            hid: "video:url:secure",
+            property: "og:video:secure_url",
+            content: "https://www.youtube.com/embed/" + this.youtubeId
+          },
+          {
+            hid: "video:type",
+            property: "og:video:type",
+            content: "text/html"
+          },
+          {
+            hid: "video:width",
+            property: "og:video:width",
+            content: this.width
+          },
+          {
+            hid: "video:height",
+            property: "og:video:height",
+            content: this.height
+          },
+          {
+            hid: "video:duration",
+            property: "video:duration",
+            content: this.duration
+          },
+          {
+            hid: "video:release_date",
+            property: "video:release_date",
+            content: this.released
+          },
+          {
+            hid: "video:director",
+            property: "video:director",
+            content: "Adam Brown"
+          },
+          {
+            hid: "url",
+            property: "og:url",
+            content: "http://hoodry.ch/" + this.slug
+          },
+          { hid: "type", property: "og:type", content: "video.other" },
+          { hid: "twitter:card", name: "twitter:card", content: "player" },
+          {
+            hid: "twitter:player:width",
+            name: "twitter:player:width",
+            content: this.width
+          },
+          {
+            hid: "twitter:player:height",
+            name: "twitter:player:height",
+            content: this.height
+          },
+          {
+            hid: "twitter:player",
+            name: "twitter:player",
+            content: "https://www.youtube.com/embed/" + this.youtubeId
+          },
+          {
+            hid: "twitter:player:url",
+            name: "twitter:player:url",
+            content: "https://www.youtube.com/embed/" + this.youtubeId
+          },
+          {
+            hid: "twitter:player:secure_url",
+            name: "twitter:player:secure_url",
+            content: "https://www.youtube.com/embed/" + this.youtubeId
+          },
+          {
+            hid: "twitter:creator",
+            name: "twitter:creator",
+            content: "hoodrychx"
+          }
+        ],
+        link: [
+          {
+            hid: "canonical",
+            rel: "canonical",
+            href: "http://hoodry.ch/" + this.slug
+          }
+        ],
+        bodyAttrs: {
+          class: "video-player"
+        }
+      };
+    }
   }
 };
 </script>
