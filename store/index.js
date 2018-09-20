@@ -20,7 +20,7 @@ const createStore = () => {
         },
         {
           id: "youtube",
-          url: "youtube.com/user/hoodrych85"
+          url: "youtube.com/hoodrych"
         }
       ]
     },
