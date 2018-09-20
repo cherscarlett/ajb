@@ -41,7 +41,9 @@ export default {
           const urlPrefix = `https://www.googleapis.com/youtube/v3/videos?part=snippet&key=${
             process.env.youTubeClientId
           }&id=`;
-          const { data } = await axios.get(`${urlPrefix}${id}`);
+          const { data } = await axios.get(
+            `${urlPrefix}${video.fields.youTubeId}`
+          );
           return {
             iframe: `<iframe type='text/html' width='100%' height='100%' src='https://www.youtube.com/embed/${
               video.fields.youTubeId
