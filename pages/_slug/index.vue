@@ -38,7 +38,7 @@ export default {
           };
         }
         if (platform === "youtube") {
-          urlPrefix = `https://www.googleapis.com/youtube/v3/videos?part=snippet&key=${
+          const urlPrefix = `https://www.googleapis.com/youtube/v3/videos?part=snippet&key=${
             process.env.youTubeClientId
           }&id=`;
           const { data } = await axios.get(`${urlPrefix}${id}`);
